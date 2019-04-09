@@ -1,0 +1,46 @@
+{
+    "name": "yiisoft/i18n-formatter-intl",
+    "type": "library",
+    "description": "Yii i18n intl message formatter",
+    "keywords": ["i18n", "formatter", "formatting"],
+    "homepage": "http://www.yiiframework.com/",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Alexander Makarov",
+            "email": "sam@rmcreative.ru",
+            "homepage": "http://rmcreative.ru/",
+            "role": "Core framework development"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/yiisoft/i18n-formatter-intl/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/i18n-formatter-inlt"
+    },
+    "require": {
+        "php": "^7.2",
+        "ext-intl": "*",
+        "yiisoft/i18n": "3.0.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yii\\I18n\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yii\\I18n\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
