@@ -13,12 +13,5 @@ The package provides message formatter that utilizes PHP intl extension message 
 [![Build Status](https://travis-ci.org/yiisoft/i18n-formatter-intl.svg?branch=master)](https://travis-ci.org/yiisoft/i18n-formatter-intl)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yiisoft/i18n-formatter-intl/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yiisoft/i18n-formatter-intl/?branch=master)
 
-## Features
-
-- Message translation.
-- Multiple message storage types.
-- Message formatting. 
-- Multiple formatters.
-
 ## General usage
 
