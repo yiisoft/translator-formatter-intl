@@ -1,8 +1,8 @@
 <?php
-namespace Yii\I18n\Formatter;
+namespace Yiisoft\I18n\Formatter;
 
-use Yii\I18n\FormattingFailed;
-use Yii\I18n\MessageFormatter;
+use Yiisoft\I18n\FormattingFailed;
+use Yiisoft\I18n\MessageFormatter;
 
 class IntlMessageFormatter implements MessageFormatter
 {
