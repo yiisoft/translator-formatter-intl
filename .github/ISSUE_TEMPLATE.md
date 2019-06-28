@@ -13,6 +13,4 @@
 | ---------------- | ---
 | Version          | 1.0.?
 | PHP version      | 
-| intl version     |
-| ICU data version |
 | Operating system |
