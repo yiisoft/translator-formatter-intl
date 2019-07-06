@@ -1,10 +1,10 @@
 <?php
 namespace Yiisoft\I18n\Formatter;
 
-use Yiisoft\I18n\FormattingFailed;
-use Yiisoft\I18n\MessageFormatter;
+use Yiisoft\I18n\FormattingException;
+use Yiisoft\I18n\MessageFormatterInterface;
 
-class IntlMessageFormatter implements MessageFormatter
+class IntlMessageFormatter implements MessageFormatterInterface
 {
     public function format(string $message, array $parameters, string $language): string
     {
@@ -15,13 +15,13 @@ class IntlMessageFormatter implements MessageFormatter
         try {
             $formatter = new \MessageFormatter($language, $message);
         } catch (\IntlException $e) {
-            throw new FormattingFailed('Message pattern is invalid: ' . $e->getMessage(), $e->getCode(), $e);
+            throw new FormattingException('Message pattern is invalid: ' . $e->getMessage(), $e->getCode(), $e);
         }
 
         $result = $formatter->format($parameters);
 
         if ($result === false) {
-            throw new FormattingFailed($formatter->getErrorMessage(), $formatter->getErrorCode());
+            throw new FormattingException($formatter->getErrorMessage(), $formatter->getErrorCode());
         }
 
         return $result;
