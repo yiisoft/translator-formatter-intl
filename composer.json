@@ -14,7 +14,8 @@
     },
     "require": {
         "php": "^7.2",
-        "ext-intl": "*",
+        "ext-intl": ">=1.0.2",
+        "lib-ICU": ">=49.0"
         "yiisoft/i18n": "3.0.x-dev"
     },
     "require-dev": {
