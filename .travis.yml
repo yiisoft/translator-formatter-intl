@@ -24,3 +24,20 @@ script:
 after_script:
     - wget -c https://scrutinizer-ci.com/ocular.phar
     - php php-ocular code-coverage:upload --format=php-clover coverage.clover
+
+notifications:
+  slack:
+    -
+      rooms:
+        -
+          secure: AtQPkaIR/z7WpBwdbSRacYIYkKn0IAL1062zweSjE3nF/010HDDtFiqmKUml1p5jLPaiJfot3u+a4DZKtZnBo+d0hglLgN9OqAqALmoEfBTRUzwZk7U0zToH82gIXko5sSx83NEpMI2l7bOrs1PpdwZmoj9hFY7aSdgGN+NTUvGhNOQpQOn4E7lc3MxybyuztDfKJwmAXXR0RK70rdqlmEN0IM2YFm4yml5CijztrDKeLjJEdgVE7i3Gno9MjMmkWRFboiSY0epuChULMJ0rmSeahJ6KXVPXzoq/0GRSZ6kNdNERxsQUb6VWbBilYRQ5/WebcCRlKFxopmViex5V6fKaVqdTNPpIz/3wbgMuN4oaRz11uAzM00jOoozPs7pFDwcde+NcTFezSN/B7idSnAI7Ezj0V87k+Ydwr1D0Zv4l172+zhA8f7PgEf+Q9xiVU9Osyq+If+jYga0GOVjBjnnkO1oHv47g1D2swtNxhnTeqkkD0EFTny2Onsu7UeW4jd/O9GITno8ldVt3dlYaTWCF8DzRwvCu9FtrAQo/UvKqLODx6TKocM3lhfoXhxBnyLoueIKVbsWdtWdeV+Siv0gMZFZW89gH63J4VdPYNV5bdyLn5nLmdYxsTrPdiC5xHCLWAMJ0ur8rXjMfFqFCQYZORkNV9i16FwCo2YMHyy4=
+      on_success: always
+      on_failure: never
+      on_pull_requests: false
+    -
+      rooms:
+        -
+          secure: tEj5UpICkGAZAbwVihZfYcgj5MzUuoo6adQyprBDuQqO6Cehct9U4CkxJeL0jFxcCY2LYAZzUniu30CO+tWm0ekEO2Xdn+2XPVwidL3GaMZA4+OgagxFrp7Rkq1xOWFkGHfT4QROFqFJ6yEUT+NPXSrZDAwijMBIy+cIx1L/BjJBsBCILo5yJhDv6wpBO5oEH42bEoGKNZGthpMglKxaZeWIwCi9AZuyJ8KGkKiLYNt68wMyKalX4BOibxTM8zjpADfaem/dstObpNiM/GuzeKJkmdJCJtDOuMjD3C+VWj+0D2hNFkazEQDC9Rl32PXhYqlooTpjkTWvBI6/2PVq5BDkGHP/QwDNOz+NxECUfToCPCeqGMjVA1s5bRRl94dcgV6tTK+3SeInlG5ckJ4xXHqomax1Jjnz2ipqVp5e9/haTiP2lUsLogMy8UVLPfE81aMVpy2S/lsW8HtfGBmYexd8pqIbksv3Wvir/mBD0NAOFIb+u58BUsqiOxpGTLkkQLFlSEkTJ9LRDXMkaHoGLT/o9df0aFlNSUNArKnodF9596nJA9J8rfWzfpM9DoU0qlzKWO6ZWXF03m/YMDwFGyMLX+zjb7IP87VaeSJG+E9w2/A/gi9gBOi79AX48RS5Qsvt/t3SUGDvAtZx7d5mCP51Fe8U+VnW2yDSkq1doKI=
+      on_success: never
+      on_failure: always
+      on_pull_requests: false
