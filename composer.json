@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Yiisoft\\I18n\\": "src"
+            "Yiisoft\\I18n\\Formatter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yiisoft\\I18n\\Tests\\": "tests"
+            "Yiisoft\\I18n\\Formatter\\Tests\\": "tests"
         }
     },
     "extra": {
