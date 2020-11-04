@@ -175,7 +175,7 @@ _MSG_
 
             // formatting a message that contains params but they are not provided.
             [
-                'Incorrect password (length must be from {min, number} to {max, number} symbols).',
+                'Incorrect password (length must be from {min} to {max} symbols).',
                 'Incorrect password (length must be from {min, number} to {max, number} symbols).',
                 ['attribute' => 'password'],
             ],
