@@ -6,7 +6,7 @@ namespace Yiisoft\Translator\Formatter\Intl;
 
 use Yiisoft\Translator\MessageFormatterInterface;
 
-class IntlMessageFormatter implements MessageFormatterInterface
+final class IntlMessageFormatter implements MessageFormatterInterface
 {
     public function format(string $message, array $parameters, string $locale): string
     {

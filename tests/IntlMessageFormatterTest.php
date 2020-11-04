@@ -7,19 +7,19 @@ namespace Yiisoft\Translator\Formatter\Intl\Tests;
 use PHPUnit\Framework\TestCase;
 use Yiisoft\Translator\Formatter\Intl\IntlMessageFormatter;
 
-class IntlMessageFormatterTest extends TestCase
+final class IntlMessageFormatterTest extends TestCase
 {
-    const N = 'n';
-    const N_VALUE = 42;
-    const F = 'f';
-    const F_VALUE = 2e+8;
-    const F_VALUE_FORMATTED = '200,000,000';
-    const D = 'd';
-    const D_VALUE = 200000000.101;
-    const D_VALUE_FORMATTED = '200,000,000.101';
-    const D_VALUE_FORMATTED_INTEGER = '200,000,000';
-    const SUBJECT = 'сабж';
-    const SUBJECT_VALUE = 'Answer to the Ultimate Question of Life, the Universe, and Everything';
+    private const N = 'n';
+    private const N_VALUE = 42;
+    private const F = 'f';
+    private const F_VALUE = 2e+8;
+    private const F_VALUE_FORMATTED = '200,000,000';
+    private const D = 'd';
+    private const D_VALUE = 200000000.101;
+    private const D_VALUE_FORMATTED = '200,000,000.101';
+    private const D_VALUE_FORMATTED_INTEGER = '200,000,000';
+    private const SUBJECT = 'сабж';
+    private const SUBJECT_VALUE = 'Answer to the Ultimate Question of Life, the Universe, and Everything';
 
     public function simplePatterns(): array
     {
