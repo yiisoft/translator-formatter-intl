@@ -1,28 +1,25 @@
 <?php
 
-namespace Yiisoft\I18n\Formatter;
+declare(strict_types=1);
 
-use Yiisoft\I18n\FormattingException;
-use Yiisoft\I18n\MessageFormatterInterface;
+namespace Yiisoft\Translator\Formatter\Intl;
 
-class IntlMessageFormatter implements MessageFormatterInterface
+use Yiisoft\Translator\MessageFormatterInterface;
+
+final class IntlMessageFormatter implements MessageFormatterInterface
 {
-    public function format(string $message, array $parameters, string $language): string
+    public function format(string $message, array $parameters, string $locale): string
     {
         if ($parameters === []) {
             return $message;
         }
 
-        try {
-            $formatter = new \MessageFormatter($language, $message);
-        } catch (\IntlException $e) {
-            throw new FormattingException('Message pattern is invalid: ' . $e->getMessage(), $e->getCode(), $e);
-        }
+        $formatter = new \MessageFormatter($locale, $message);
 
         $result = $formatter->format($parameters);
 
         if ($result === false) {
-            throw new FormattingException($formatter->getErrorMessage(), $formatter->getErrorCode());
+            return $message;
         }
 
         return $result;

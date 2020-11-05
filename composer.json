@@ -1,7 +1,7 @@
 {
-    "name": "yiisoft/i18n-formatter-intl",
+    "name": "yiisoft/translator-formatter-intl",
     "type": "library",
-    "description": "Yii i18n intl message formatter",
+    "description": "Yii translator intl message formatter",
     "keywords": [
         "i18n",
         "formatter",
@@ -10,30 +10,31 @@
     "homepage": "http://www.yiiframework.com/",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiisoft/i18n-formatter-intl/issues?state=open",
+        "issues": "https://github.com/yiisoft/translator-formatter-intl/issues?state=open",
         "forum": "http://www.yiiframework.com/forum/",
         "wiki": "http://www.yiiframework.com/wiki/",
         "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/i18n-formatter-intl"
+        "source": "https://github.com/yiisoft/translator-formatter-intl"
     },
     "require": {
         "php": "^7.4|^8.0",
         "ext-intl": ">=1.0.2",
         "lib-ICU": ">=49.0",
-        "yiisoft/i18n": "3.0.x-dev"
+        "yiisoft/translator": "3.0.x-dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3",
-        "phan/phan": "^3.0"
+        "infection/infection": "^0.18.2",
+        "phpunit/phpunit": "^9.4",
+        "vimeo/psalm": "^4.0"
     },
     "autoload": {
         "psr-4": {
-            "Yiisoft\\I18n\\Formatter\\": "src"
+            "Yiisoft\\Translator\\Formatter\\Intl\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yiisoft\\I18n\\Formatter\\Tests\\": "tests"
+            "Yiisoft\\Translator\\Formatter\\Intl\\Tests\\": "tests"
         }
     },
     "extra": {
