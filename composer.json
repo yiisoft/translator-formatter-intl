@@ -23,7 +23,7 @@
         "yiisoft/translator": "3.0.x-dev"
     },
     "require-dev": {
-        "infection/infection": "^0.18.2",
+        "infection/infection": "^0.18.2 || ^0.20.0",
         "phpunit/phpunit": "^9.3",
         "vimeo/psalm": "^4.0",
         "phan/phan": "^3.0"
