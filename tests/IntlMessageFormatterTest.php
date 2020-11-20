@@ -37,8 +37,8 @@ final class IntlMessageFormatterTest extends TestCase
             [
                 '42-two',
                 '{n, selectordinal, one{#-one} two{#-two} few{#-few} other{#-other}}',
-                ['n' => 42]
-            ]
+                ['n' => 42],
+            ],
         ];
     }
 
@@ -263,17 +263,17 @@ _MSG_
                 '{0, plural, one {offer} other {offers}}',
                 [13],
             ],
-//            [
-//                '', // Message pattern is invalid
-//                'Message without {closing} {brace',
-//                ['closing brace and with'],
-//            ],
+            //            [
+            //                '', // Message pattern is invalid
+            //                'Message without {closing} {brace',
+            //                ['closing brace and with'],
+            //            ],
             [
                 'Уважаемый Vadim,',
                 '{gender, select, female{Уважаемая} other{Уважаемый}} {firstname},',
                 [
                     'gender' => null,
-                    'firstname' => 'Vadim'
+                    'firstname' => 'Vadim',
                 ],
             ],
         ];
@@ -351,7 +351,6 @@ _MSG_
             ],
         ];
     }
-
 
     /**
      * @dataProvider simplePatterns
