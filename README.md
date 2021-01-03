@@ -17,7 +17,52 @@ The package provides message formatter that utilizes PHP intl extension message 
 [![static analysis](https://github.com/yiisoft/translator-formatter-intl/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/translator-formatter-intl/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yiisoft/translator-formatter-intl/coverage.svg)](https://shepherd.dev/github/yiisoft/translator-formatter-intl)
 
+The package could be installed with composer:
+
+```
+composer require yiisoft/translator-formatter-intl
+```
+
 ## General usage
+
+### Example of usage with `yiisoft/translator`
+```php
+/** @var \Yiisoft\Translator\Translator $translator **/
+
+$categoryName = 'moduleId';
+$pathToModuleTranslations = './module/messages/';
+$additionalCategory = new Yiisoft\Translator\Category(
+    $categoryName, 
+    new \Yiisoft\Translator\Message\Php\MessageSource($pathToModuleTranslations),
+    new \Yiisoft\Translator\Formatter\Intl\IntlMessageFormatter()
+);
+$translator->addCategorySource($additionalCategory);
+
+$translator->translate('Test string: {str}', ['str' => 'string data'], 'moduleId', 'en');
+// output: Test string: string data
+```
+
+### Example of usage without `yiisoft/translator` package
+```php
+
+/** @var \Yiisoft\Translator\Formatter\Intl\IntlMessageFormatter $formatter */
+$pattern = 'Total {count, number} {count, plural, one{item} other{items}}.';
+$params = ['count' => 1];
+echo $formatter->format($pattern, $params);
+// output: Total 1 item. 
+
+$pattern = '{gender, select, female{Уважаемая} other{Уважаемый}} {firstname}';
+$params = ['gender' => null, 'firstname' => 'Vadim'];
+echo $formatter->format($pattern, $params, 'ru');
+// output: Уважаемый Vadim 
+
+$pattern = '{name} is {gender} and {gender, select, female{she} male{he} other{it}} loves Yii!';
+$params = ['name' => 'Alexander', 'gender' => 'male'];
+echo $formatter->format($pattern, $params);
+// output: Alexander is male and he loves Yii! 
+```
+
+To get a list of options available for locale you're using - see [https://intl.rmcreative.ru/](https://intl.rmcreative.ru/)
 
 ### Unit testing
 
