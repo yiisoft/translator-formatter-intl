@@ -17,6 +17,8 @@ The package provides message formatter that utilizes PHP intl extension message 
 [![static analysis](https://github.com/yiisoft/translator-formatter-intl/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/translator-formatter-intl/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yiisoft/translator-formatter-intl/coverage.svg)](https://shepherd.dev/github/yiisoft/translator-formatter-intl)
 
+## Installation
+
 The package could be installed with composer:
 
 ```
