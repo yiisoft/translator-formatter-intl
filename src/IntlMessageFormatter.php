@@ -10,6 +10,7 @@ final class IntlMessageFormatter implements MessageFormatterInterface
 {
     /**
      * This method uses \MessageFormatter::format()
+     *
      * @link https://php.net/manual/en/messageformatter.format.php
      */
     public function format(string $message, array $parameters, string $locale): string
