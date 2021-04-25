@@ -25,6 +25,23 @@ The package could be installed with composer:
 composer require yiisoft/translator-formatter-intl
 ```
 
+## Configuration
+
+In case you use [`yiisoft/config`](http://github.com/yiisoft/config), you will get configuration automatically. If not, the following DI container configuration is necessary:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Yiisoft\Translator\MessageFormatterInterface;
+use Yiisoft\Translator\Formatter\Intl\IntlMessageFormatter;
+
+return [
+    MessageFormatterInterface::class => IntlMessageFormatter::class,
+];
+```
+
 ## General usage
 
 ### Example of usage with `yiisoft/translator`
