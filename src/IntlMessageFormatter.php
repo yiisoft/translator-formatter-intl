@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Yiisoft\Translator\Formatter\Intl;
 
+use MessageFormatter;
 use Yiisoft\Translator\MessageFormatterInterface;
 
 final class IntlMessageFormatter implements MessageFormatterInterface
@@ -19,7 +20,7 @@ final class IntlMessageFormatter implements MessageFormatterInterface
             return $message;
         }
 
-        $formatter = new \MessageFormatter($locale, $message);
+        $formatter = new MessageFormatter($locale, $message);
 
         $result = $formatter->format($parameters);
 
