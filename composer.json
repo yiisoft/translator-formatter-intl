@@ -1,7 +1,7 @@
 {
     "name": "yiisoft/translator-formatter-intl",
     "type": "library",
-    "description": "Yii translator intl message formatter",
+    "description": "Yii Translator intl Message Formatter",
     "keywords": [
         "i18n",
         "formatter",
@@ -23,10 +23,10 @@
         "yiisoft/translator": "3.0.x-dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.4",
-        "roave/infection-static-analysis-plugin": "^1.6",
+        "phpunit/phpunit": "^9.5",
+        "roave/infection-static-analysis-plugin": "^1.7",
         "spatie/phpunit-watcher": "^1.23",
-        "vimeo/psalm": "^4.3"
+        "vimeo/psalm": "^4.7"
     },
     "autoload": {
         "psr-4": {
