@@ -20,7 +20,7 @@
         "php": "^7.4|^8.0",
         "ext-intl": ">=1.0.2",
         "lib-ICU": ">=49.0",
-        "yiisoft/translator": "3.0.x-dev"
+        "yiisoft/translator": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
@@ -52,8 +52,6 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "test": "phpunit --testdox --no-interaction",
         "test-watch": "phpunit-watcher watch"
