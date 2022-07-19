@@ -53,17 +53,15 @@ return [
 ### Example of usage with `yiisoft/translator`
 
 ```php
-/** @var \Yiisoft\Translator\Translator $translator **/
-
 $categoryName = 'moduleId';
 $pathToModuleTranslations = './module/messages/';
-$additionalCategorySource = new Yiisoft\Translator\CategorySource(
+$additionalCategory = new Yiisoft\Translator\CategorySource(
     $categoryName, 
     new \Yiisoft\Translator\Message\Php\MessageSource($pathToModuleTranslations),
     new \Yiisoft\Translator\Formatter\Intl\IntlMessageFormatter()
 );
-$translator->addCategorySource($additionalCategorySource);
 
+$translator = new \Yiisoft\Translator\Translator($locale, $fallbackLocale, [$additionalCategory]);
 $translator->translate('Test string: {str}', ['str' => 'string data'], 'moduleId', 'en');
 // output: Test string: string data
 ```
