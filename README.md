@@ -1,4 +1,16 @@
 <p align="center">
+    <b>
+        This package is deprecated and is now part of 
+        <a href="https://github.com/yiisoft/translator">yiisoft/translator</a>.
+    </b>
+</p>
+<p align="center">
+    ❌
+</p>
+
+---
+
+<p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://yiisoft.github.io/docs/images/yii_logo.svg" height="100px">
     </a>
